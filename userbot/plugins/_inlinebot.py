@@ -30,7 +30,7 @@ from userbot.cmdhelp import *
 from mafiabot.utils import *
 from userbot.Config import Config
 
-mafia_help_pic = Config.HELP_PIC or "https://telegra.ph/file/f6a46c6251bb8a5bea300.mp4"
+mafia_help_pic = Config.HELP_PIC or "https://telegra.ph/file/8e0c9f149838df605c121.mp4"
 mafia_row = Config.BUTTONS_IN_HELP
 mafia_emoji = Config.EMOJI_IN_HELP
 # thats how a lazy guy imports
@@ -58,13 +58,13 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"◀️ ᏰᎯᏣᏦ {mafia_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"◀️ Back {mafia_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"•{mafia_emoji} ❌ {mafia_emoji}•", data="close"
+               f" ❌ ", data="close"
             ),
             custom.Button.inline(
-               f"{mafia_emoji} ᏁᏋﾒᎿ ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"{mafia_emoji} Next ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
